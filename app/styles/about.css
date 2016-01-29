@@ -1,0 +1,184 @@
+@charset "UTF-8";
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  color: #333;
+  font-family: 'Hiragino Sans GB', Helvetica, Arial, 'STHeiti', 'WenQuanYi Micro Hei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: #fff;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2em .5em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1));
+}
+.logo {
+  height: 70px;
+  border-radius: 15px;
+}
+.title {
+  font-size: 1.5em;
+}
+.description {
+  margin: .5em 0;
+  font-size: 2em;
+}
+.download {
+  margin: 1em 0;
+}
+.hero-button {
+  margin: 1em 0 0;
+  background: none;
+  border: 1px solid #4285f4;
+  border-radius: 3px;
+  color: #4285f4;
+  padding: .5em 3em;
+}
+.share {
+  font-size: .9em;
+}
+.share .action {
+  margin-left: 1em;
+}
+.screenshots {
+  width: 300px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.screenshot {
+  position: absolute;
+}
+.screenshot.android {
+  left: 0;
+}
+.screenshot.ios {
+  right: 0;
+  text-align: right;
+}
+.screenshot img {
+  width: 70%;
+}
+.icons {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.icons img {
+  border-radius: 50%;
+}
+@keyframes shine {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes shine {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes float {
+  from {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+  }
+}
+@-webkit-keyframes float {
+  from {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+  }
+}
+.icons .icon {
+  position: absolute;
+}
+.qr-wrapper {
+  display: inline-block;
+  position: relative;
+}
+.qr-wrapper:hover .qr {
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+.qr-wrapper .qr-active {
+  padding: 0 1em;
+}
+.qr-wrapper .qr {
+  z-index: 10;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  transform-origin: left center;
+  -webkit-transform-origin: left center;
+  transition: opacity .3s, transform .3s;
+  -webkit-transition: opacity .3s, transform .3s;
+}
+@media(max-width: 600px) {
+  .description {
+    font-size: 1.6em;
+  }
+  .hero-button {
+    margin-top: .5em;
+  }
+}
+@media(max-height: 600px) {
+  .logo {
+    height: 60px;
+    border-radius: 15px;
+  }
+  .title {
+    font-size: 1.2em;
+  }
+}
+.sep20 {
+  height: 20px;
+}
+.sep50 {
+  height: 50px;
+}
+.text-center {
+  text-align: center;
+}
+.show-when-small {
+  display: none;
+}
+@media (max-width: 600px) {
+  .hide-when-small {
+    display: none !important;
+  }
+  .show-when-small {
+    display: block;
+  }
+}
+@media (max-width: 960px) {
+  .hide-when-not-large {
+    display: none !important;
+  }
+}
