@@ -1,49 +1,5 @@
 // bower:scss
 // endbower
-@font-face {
-  font-family: 'PingHei';
-  font-style: normal;
-  font-weight: 200;
-  src: local('☺︎'), url(../fonts/PingHei-light.woff) format("woff"), url(../fonts/PingHei-light.ttf) format("truetype");
-  /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
-}
-@font-face {
-  font-family: 'PingHei 200';
-  src: url(../fonts/PingHei-light.eot);
-  /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
-}
-@font-face {
-  font-family: 'PingHei';
-  font-style: normal;
-  font-weight: 600;
-  src: local('☺︎'), url(../fonts/PingHei-semibold.woff) format("woff"), url(../fonts/PingHei-semibold.ttf) format("truetype");
-  /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
-}
-@font-face {
-  font-family: 'PingHei 600';
-  src: url(../fonts/PingHei-semibold.eot);
-  /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
-}
-@font-face {
-  font-family: 'PingHei';
-  font-style: normal;
-  font-weight: 700;
-  src: local('☺︎'), url(../fonts/PingHei-bold.woff) format("woff"), url(../fonts/PingHei-bold.ttf) format("truetype");
-  /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
-}
-@font-face {
-  font-family: 'PingHei 700';
-  src: url(../fonts/PingHei-bold.eot);
-  /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
-}
-@font-face {
-  font-family: 'PingHei';
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/PingHei-text.eot);
-  src: local('☺︎'), url(../fonts/PingHei-text.woff) format("woff"), url(../fonts/PingHei-text.ttf) format("truetype");
-  /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
-}
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
   padding: 0;
@@ -101,12 +57,13 @@ html {
   height: 100%;
 }
 html[lang=zh-CN] body {
-  font-family: 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+  font-family: "SF UI Display", ".PingFang SC", "PingFang SC", "Neue Haas Grotesk Text Pro", "Arial Nova", "Segoe UI", "Microsoft YaHei", "Microsoft JhengHei", "Helvetica Neue", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "Helvetica", "Hiragino Sans GB", sans-serif;
+  // font-family: 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
 }
 html[lang=zh-CN] h1,
 html[lang=zh-CN] h2,
 html[lang=zh-CN] h3 {
-  font-family: 'PingHei', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+  font-family: "SF UI Display", ".PingFang SC", "PingFang SC", "Neue Haas Grotesk Text Pro", "Arial Nova", "Segoe UI", "Microsoft YaHei", "Microsoft JhengHei", "Helvetica Neue", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "Helvetica", "Hiragino Sans GB", sans-serif;
 }
 body {
   font-size: 18px;
@@ -243,6 +200,18 @@ a {
     font-size: 24px;
   }
 }
+@media screen and (max-width:320px) {
+  h1 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
 a.btn {
   cursor: pointer;
   display: inline-block;
@@ -252,7 +221,7 @@ a.btn {
   vertical-align: baseline;
   background: #e0e1e2;
   color: rgba(0, 0, 0, .6);
-  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: "SF UI Display", ".PingFang SC", "PingFang SC", "Neue Haas Grotesk Text Pro", "Arial Nova", "Segoe UI", "Microsoft YaHei", "Microsoft JhengHei", "Helvetica Neue", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "Helvetica", "Hiragino Sans GB", sans-serif;
   margin: 0 0.25em 0 0;
   padding: 0.78571429em 1.5em;
   text-transform: none;
@@ -345,14 +314,14 @@ a.btn.btn-ghost:hover {
   height: 50px;
 }
 .show-when-small {
-  display: none;
+  display: none !important;
 }
 @media (max-width: 600px) {
   .hide-when-small {
     display: none !important;
   }
   .show-when-small {
-    display: block;
+    display: block !important;
   }
 }
 @media (max-width: 960px) {
@@ -376,7 +345,7 @@ a.btn.btn-ghost:hover {
     bottom: 0;
     background: rgba(0, 0, 0, .55);
     z-index: 2;
-    background: url(../images/hero-background-2x.png);
+    background: url(http://static.yunmadou.13980.com/static/res/web/images/hero-background-2x.png@80q);
     background-position: 10% center;
     background-size: cover;
   }
@@ -387,8 +356,8 @@ a.btn.btn-ghost:hover {
     height: 100%;
     width: 100%;
     z-index: 1;
-    background: url(../images/hero-background-2x.png);
-    background-position: 10% center;
+    background: url(http://static.yunmadou.13980.com/static/res/web/images/hero-background.jpg@8-8bl_50q);
+    background-position: center;
     background-size: cover;
     video {
       -webkit-backface-visibility: hidden;
@@ -415,7 +384,7 @@ a.btn.btn-ghost:hover {
     background-color: rgba(0,0,0,.35);
     background-repeat: repeat;
     background-position: center center;
-    background-image: url(../images/pattern.png);
+    background-image: url(http://static.yunmadou.13980.com/static/res/web/images/pattern.png);
     background-size: auto;
     z-index: 2;
   }
@@ -428,7 +397,7 @@ a.btn.btn-ghost:hover {
     transform: translateY(-50%);
     z-index: 3;
     .hero-text-h1 {
-      font-family: 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+      font-family: "SF UI Display", ".PingFang SC", "PingFang SC", "Neue Haas Grotesk Text Pro", "Arial Nova", "Segoe UI", "Microsoft YaHei", "Microsoft JhengHei", "Helvetica Neue", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "Helvetica", "Hiragino Sans GB", sans-serif;
       margin-top: 0;
       margin-bottom: 0;
       text-transform: uppercase;
@@ -544,8 +513,31 @@ a.btn.btn-ghost:hover {
     transform: translate3d(0, 5px, 0);
   }
 }
+.qr-wrapper {
+  display: inline-block;
+  position: relative;
+  &:hover .qr {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  .qr-active {
+    padding: 0 1em;
+  }
+  .qr {
+    z-index: 10;
+    position: absolute;
+    opacity: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    transform-origin: left center;
+    -webkit-transform-origin: left center;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transition: opacity 0.3s, transform 0.3s;
+  }
+}
 #nav {
-  background: #fff;
+  // background: #fff;
   line-height: 12px;
   padding: 17px 15px;
   position: fixed;
@@ -553,8 +545,10 @@ a.btn.btn-ghost:hover {
   left: 0;
   right: 0;
   z-index: 10;
-  opacity: 0.95;
-  box-shadow: 0 1px 0 0 hsla(0, 0%, 57%, .2);
+  // opacity: 0.95;
+  // box-shadow: 0 1px 0 0 hsla(0, 0%, 57%, .2);
+  background-color: rgba(255,255,255,0.9);
+  -webkit-backdrop-filter: blur(10px);
   .sticky {
     margin-top: 0;
     position: fixed;
@@ -610,29 +604,6 @@ a.btn.btn-ghost:hover {
           height: 30px;
           line-height: 30px;
         }
-      }
-    }
-    .qr-wrapper {
-      display: inline-block;
-      position: relative;
-      &:hover .qr {
-        opacity: 1;
-        transform: scale(1);
-        -webkit-transform: scale(1);
-      }
-      .qr-active {
-        padding: 0 1em;
-      }
-      .qr {
-        z-index: 10;
-        position: absolute;
-        opacity: 0;
-        transform: scale(0);
-        -webkit-transform: scale(0);
-        transform-origin: left center;
-        -webkit-transform-origin: left center;
-        transition: opacity 0.3s, transform 0.3s;
-        -webkit-transition: opacity 0.3s, transform 0.3s;
       }
     }
   }
@@ -763,12 +734,12 @@ a.btn.btn-ghost:hover {
   -ms-transform: scale(0);
   -o-transform: scale(0);
   transform: scale(0);
-  -webkit-transition-duration: 0s;
-  -moz-transition-duration: 0s;
-  transition-duration: 0s;
-  -webkit-transition-delay: 0s;
-  -moz-transition-delay: 0s;
-  transition-delay: 0s;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
 }
 .cd-nav-trigger.close-nav::before {
   /* user clicks on the .cd-nav-trigger element - 1st rounded background disappears */
@@ -823,7 +794,9 @@ a.btn.btn-ghost:hover {
   width: 100%;
   padding: 80px 5%;
   z-index: 12;
-  background-color: #091d23;
+  // background-color: #E7084C;
+  background-color: rgba(231,8,76,0.8);
+  -webkit-backdrop-filter: blur(5px);
   overflow: auto;
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
   -webkit-overflow-scrolling: touch;
@@ -848,6 +821,7 @@ a.btn.btn-ghost:hover {
   color: #fff;
 }
 .cd-primary-nav a {
+  color: #fff;
   font-size: 20px;
   font-size: 1.25rem;
   -webkit-font-smoothing: antialiased;
@@ -934,7 +908,9 @@ a.btn.btn-ghost:hover {
   z-index: 2;
 }
 .cd-overlay-nav span {
-  background-color: #091d23;
+  // background-color: #E7084C;
+  background-color: rgba(231,8,76,0.5);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .cd-overlay-content {
@@ -942,7 +918,7 @@ a.btn.btn-ghost:hover {
   z-index: 4;
 }
 .cd-overlay-content span {
-  background-color: #ffb441;
+  background-color: #fff;
 }
 section.headline {
   padding: 60px 15px;
@@ -963,7 +939,7 @@ section.headline {
   }
 }
 section.headline#main-cta {
-  background: url(../images/canvas-landscape.png);
+  background: url(http://static.yunmadou.13980.com/static/res/web/images/canvas-landscape.png@8-8bl_80q);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1009,7 +985,7 @@ section#panorama {
         z-index: 2;
       }
       #panoramic-background {
-        background: url(../images/tilt-to-pan.png);
+        background: url(http://static.yunmadou.13980.com/static/res/web/images/tilt-to-pan.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1035,7 +1011,7 @@ section#panorama {
       overflow: hidden;
       z-index: 9;
       #phone-screen {
-        background: url(../images/tilt-to-pan-2x.png);
+        background: url(http://static.yunmadou.13980.com/static/res/web/images/tilt-to-pan-2x.png);
         background-size: 910px 596px;
         background-repeat: no-repeat;
         background-position: center;
@@ -1052,7 +1028,7 @@ section#panorama {
       }
     }
     .phone {
-      background: url(../images/samsung-frame.png);
+      background: url(http://static.yunmadou.13980.com/static/res/web/images/samsung-frame.png);
       background-size: cover;
       background-repeat: no-repeat;
       height: 500px;
@@ -1096,7 +1072,7 @@ section#mobile {
     width: 100%;
     max-width: 900px;
     height: 600px;
-    background-image: url(../images/bg.png);
+    background-image: url(http://static.yunmadou.13980.com/static/res/web/images/bg.png);
     background-size: 100%;
     background-repeat: no-repeat;
   }
@@ -1119,7 +1095,7 @@ section#mobile {
     #mobile-phone-one {
       height: 472.5px;
       width: 235px;
-      background-image: url(../images/designed-for-mobile-iphone-2x.png);
+      background-image: url(http://static.yunmadou.13980.com/static/res/web/images/designed-for-mobile-iphone-2x.png);
       margin-left: -50px;
       z-index: 3;
       bottom: -175px;
@@ -1127,7 +1103,7 @@ section#mobile {
     #mobile-phone-two {
       height: 527.25px;
       width: 270.75px;
-      background-image: url(../images/designed-for-mobile-motorola-2x.png);
+      background-image: url(http://static.yunmadou.13980.com/static/res/web/images/designed-for-mobile-motorola-2x.png);
       margin-left: 28.5px;
       bottom: -150px;
       z-index: 2;
@@ -1159,7 +1135,7 @@ section#objective {
     width: 213px;
     height: 430px;
     .phone-device {
-      background-image: url(../images/iphone-frame-2x.png);
+      background-image: url(http://static.yunmadou.13980.com/static/res/web/images/iphone-frame-2x.png);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -1192,7 +1168,7 @@ section#objective {
             left: 0;
             z-index: 1;
             cursor: pointer;
-            background: url(../images/button-play.png) center no-repeat;
+            background: url(http://static.yunmadou.13980.com/static/res/web/images/button-play.png) center no-repeat;
             transition: opacity 0.25s ease;
             display: none;
           }
